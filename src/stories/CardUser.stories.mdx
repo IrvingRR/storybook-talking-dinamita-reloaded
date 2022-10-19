@@ -1,0 +1,137 @@
+import { Canvas, Meta, Story, ArgsTable } from '@storybook/addon-docs';
+import CardUser from '../components/CardUser';
+
+<Meta title='MDX/CardUser' component={ CardUser } argTypes={{
+    data: {
+        name: 'Card data',
+        description: 'Recive an object with the information of the user',
+        table: {
+            defaultValue: {
+                summary: {},
+            },
+            type: {
+                summary: `{
+                    name: 'Susana Johnson',
+                    email: 'suana-johnson@gmail.com',
+                    image: 'image.jpg
+                    view: false
+                }`,
+                
+            },
+        },
+    }
+}}/>
+
+export const Template = (args) => <CardUser { ...args }/>
+
+export const userData = {
+    name: 'Susana Johnson',
+    email: 'suana-johnson@gmail.com',
+    image: 'https://static9.depositphotos.com/1687987/1171/i/600/depositphotos_11715353-stock-photo-young-woman-portrait.jpg',
+    favorite: false,
+    view: false
+};
+
+# CardUser
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem autem nulla consequuntur officiis debitis ex sed adipisci numquam nemo aspernatur expedita libero obcaecati natus temporibus eveniet, odit porro accusamus aperiam ut rerum exercitationem fuga explicabo. Voluptatum placeat quasi ratione possimus?
+
+<Canvas withToolbar>
+    <Story name='CardUser' args={{
+        data: userData
+    }}/>
+    <Story name='CardUserDark' args={{
+        data: userData,
+        theme: 'dark'
+    }}/>
+</Canvas>
+
+<ArgsTable story='CardUser'/>
+
+## Stories
+
+### Card user
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem autem nulla consequuntur officiis debitis ex sed adipisci numquam nemo aspernatur expedita libero obcaecati natus temporibus eveniet, odit porro accusamus aperiam ut rerum exercitationem fuga explicabo. Voluptatum placeat quasi ratione possimus?   
+- Banckground color white
+- Content color dark gray
+- Icon color gray
+
+<Canvas withToolbar>
+    <Story name='Card' args={{
+        data: userData
+    }}/>
+</Canvas>
+
+### Card user dark
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem autem nulla consequuntur officiis debitis ex sed adipisci numquam nemo aspernatur expedita libero obcaecati natus temporibus eveniet, odit porro accusamus aperiam ut rerum exercitationem fuga explicabo. Voluptatum placeat quasi ratione possimus?   
+- Banckground color dark blue
+- Content color white
+- Icon color gray
+
+<Canvas withToolbar>
+    <Story name='CardDark' args={{
+        data: userData,
+        theme: 'dark'
+    }}/>
+</Canvas>
+
+### Card user is favorite
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem autem nulla consequuntur officiis debitis ex sed adipisci numquam nemo aspernatur expedita libero obcaecati natus temporibus eveniet, odit porro accusamus aperiam ut rerum exercitationem fuga explicabo. Voluptatum placeat quasi ratione possimus?   
+- Banckground color white
+- Content color dark gray
+- Icon color reddish pink
+
+<Canvas withToolbar>
+    <Story name='CardIsFavorite' args={{
+        data: {
+            ...userData,
+            favorite: true
+        }
+    }}/>
+</Canvas>
+
+### Card user is favorite dark
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem autem nulla consequuntur officiis debitis ex sed adipisci numquam nemo aspernatur expedita libero obcaecati natus temporibus eveniet, odit porro accusamus aperiam ut rerum exercitationem fuga explicabo. Voluptatum placeat quasi ratione possimus?   
+- Banckground color dark blue
+- Content color white
+- Icon color reddish pink
+
+<Canvas withToolbar>
+    <Story name='CardIsFavoriteDark' args={{
+        data: {
+            ...userData,
+            favorite: true
+        },
+        theme: 'dark'
+    }}/>
+</Canvas>
+
+### Card user view
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem autem nulla consequuntur officiis debitis ex sed adipisci numquam nemo aspernatur expedita libero obcaecati natus temporibus eveniet, odit porro accusamus aperiam ut rerum exercitationem fuga explicabo. Voluptatum placeat quasi ratione possimus?   
+- Banckground color white
+- Content color dark gray
+- Icon color gray
+
+<Canvas withToolbar>
+    <Story name='CardView' args={{
+        data: {
+            ...userData,
+            view: true
+        }
+    }}/>
+</Canvas>
+
+### Card user view dark
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem autem nulla consequuntur officiis debitis ex sed adipisci numquam nemo aspernatur expedita libero obcaecati natus temporibus eveniet, odit porro accusamus aperiam ut rerum exercitationem fuga explicabo. Voluptatum placeat quasi ratione possimus?   
+- Banckground color white
+- Content color dark gray
+- Icon color gray
+
+<Canvas withToolbar>
+    <Story name='CardViewDark' args={{
+        data: {
+            ...userData,
+            view: true
+        },
+        theme: 'dark'
+    }}/>
+</Canvas>

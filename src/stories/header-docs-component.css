@@ -1,0 +1,22 @@
+.docs-main-container {
+    width: 100%;
+    font-size: var(--fs-s-2);
+}
+
+h1 {
+    font-size: var(--fs-m-2);
+    padding: 10px 0;
+ }
+
+h2 {
+    font-size: var(--fs-m-1);
+    padding: 10px 0;
+ }
+
+ .doc-list {
+    padding-left: 20px;
+ }
+
+ p {
+    line-height: 23px;
+ }

@@ -1,0 +1,62 @@
+import { Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import IconButton from '../components/IconButton';
+
+# IconButton component
+IconButton is the component that allow you to implement a button with an icon like content. It has four possible states.
+ 
+- [Primary](#primary)
+- [Secondary](#secondary)
+- [Third](#third)
+- [Transparent](#transparent)
+
+<Canvas decorators={[(Story) => <div className='flex-align-center'><Story/></div>]}>
+    <Story id='externalfile-iconbutton--icon-button-primary'/>   
+    <Story id='externalfile-iconbutton--icon-button-secondary'/> 
+    <Story id='externalfile-iconbutton--icon-button-third'/> 
+    <Story id='externalfile-iconbutton--icon-button-transparent'/> 
+</Canvas>
+
+<ArgsTable of={ IconButton }/>
+
+## Stories
+
+### Primary
+This is the default state of the component which will be displayed on the UI
+
+<Canvas>
+    <Story id='externalfile-iconbutton--icon-button-primary'/>
+</Canvas>
+
+### Secondary
+This is the third variant of the IconButton component when the variant arg is ** secondary **.   
+- The background color is transparent and the content color is  dark gray.
+- The border color is dark gray.
+- In the hover state the background color is dark gray and the content color is white. 
+- Has a shadow of the primary color.
+
+<Canvas>
+    <Story id='externalfile-iconbutton--icon-button-secondary'/>
+</Canvas>
+
+### Third
+This is the third variant of the IconButton component when the variant arg is ** third ** .   
+- The background color is transparent.
+- The content color is dark gray.
+- The border color is transparent.
+- In the hover state the background color is the primary color and the content color is white.
+
+<Canvas>
+    <Story id='externalfile-iconbutton--icon-button-third'/>
+</Canvas>
+
+### Transparent
+This is the transparent variant of the IconButton component when the variant arg is ** transparent **   
+- The background color is transparent.
+- The content color is dark gray.
+- The border color is transparent.
+- In the state hover the background color is transparent and the content color is the same.
+- Has a shadow of the primary color.
+
+<Canvas>
+    <Story id='externalfile-iconbutton--icon-button-transparent'/>
+</Canvas>
